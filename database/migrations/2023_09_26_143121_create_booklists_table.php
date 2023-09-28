@@ -13,10 +13,8 @@ return new class extends Migration
     {
         Schema::create('booklists', function (Blueprint $table) {
             $table->id();
-            $table->integer('number');
-            $table->string('author');
             $table->string('title');
-            $table->string('tags');
+            $table->string('tags')->nullable();
             $table->longText('description');
             $table->timestamps();
         });
