@@ -1,3 +1,6 @@
+@extends('layout')
+
+@section('content')
 <h1>{{$heading}}</h1>
 
 @unless(count($booklists) == 0)
@@ -13,3 +16,5 @@
 @else 
 <p>No booklists found</p>
 @endunless
+
+@endsection
