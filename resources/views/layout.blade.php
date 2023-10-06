@@ -14,7 +14,7 @@
     {{-- VIEW OUTPUT--}}
 
     <nav class="flex justify-between items-center mb-0">
-        <a href="index.html">
+        <a href="/">
             <img class="w-24" src="{{asset('images/compact-logo.png')}}" alt="" class="logo"/>
         </a>
 
