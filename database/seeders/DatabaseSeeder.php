@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Booklist;
+use App\Models\Book;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -16,6 +17,7 @@ class DatabaseSeeder extends Seeder
         \App\Models\User::factory(10)->create();
 
         Booklist::factory(6)->create();
+        Book::factory(6)->create();
 
         // Booklist::create([
         //     'title' => '100 лучших книг всех времен и народов',
