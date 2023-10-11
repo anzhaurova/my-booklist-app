@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+
 
 class Booklist extends Model
 {
@@ -13,8 +13,8 @@ class Booklist extends Model
     /**
      * Get the books associated with the booklist.
      */
-    public function books(): HasMany
+    public function books()
     {
-        return $this->hasMany(Book::class);
+        return $this->belongsToMany(Book::class, 'booklist_book', 'booklist_id', 'book_id');
     }
 }

@@ -19,7 +19,7 @@ class BookFactory extends Factory
     {
         return [
             // 'booklists_id' => Booklist::factory(),
-            'author_id' => $this->faker->sentence(),
+            // 'author_id' => $this->faker->sentence(),
             'name' => $this->faker->sentence(),
         ];
     }
