@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
 
         Booklist::factory(6)->create();
         Book::factory(6)->create();
-        Author::factory(10)->create();
+        Author::factory(6)->create();
 
         // Booklist::create([
         //     'title' => '100 лучших книг всех времен и народов',

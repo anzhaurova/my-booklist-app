@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Author;
 use Illuminate\Http\Request;
 use App\Models\Booklist;
 use Illuminate\Support\Facades\Route;
@@ -28,3 +29,9 @@ Route::get('/booklists/{id}', function($id) {
         'booklist' => Booklist::find($id)
     ]); 
 });
+
+
+// Route::get('/test', function () {
+//     $author = Author::find(5);
+//     dd($author->books);
+// });

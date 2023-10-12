@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('books', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('author_id')->nullable();
+            $table->integer('author_id');
             $table->string('name');
             $table->string('img')->nullable();
             $table->timestamps();

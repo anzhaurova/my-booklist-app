@@ -9,7 +9,7 @@
 <div class="mx-4">
 <div class="bg-gray-50 border border-gray-200 p-10 rounded">
     <div class="flex flex-col items-center justify-center text-center">
-        <h3 class="text-2xl mb-2">{{$booklist->title ?? ""}}</h3>
+        <h3 class="text-2xl mb-2">{{$booklist->name ?? ""}}</h3>
     </div>
     {{-- <ul>
         <li>{{$booklist->author ?? ""}}</li>

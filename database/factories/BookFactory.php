@@ -2,7 +2,7 @@
 
 namespace Database\Factories;
 
-use App\Models\Booklist;
+use Database\Factories\AuthorFactory;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,9 +18,9 @@ class BookFactory extends Factory
     public function definition(): array
     {
         return [
-            // 'booklists_id' => Booklist::factory(),
-            // 'author_id' => $this->faker->sentence(),
+            // 'author_id' => AuthorFactory::factory(),
             'name' => $this->faker->sentence(),
+            'author_id' => $this->faker->randomDigit(),
         ];
     }
 }
