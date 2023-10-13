@@ -11,7 +11,7 @@
     <div class="flex flex-col items-center justify-center text-center">
         <h3 class="text-2xl mb-2">{{$booklist->name ?? ""}}</h3>
         <div class="flex">
-            <img src="{{asset('images/full-logo.png')}}" alt="">
+            <img class=""   src="{{asset('images/full-logo.png')}}" alt="">
         </div>
     </div>
     {{-- <ul>
