@@ -24,10 +24,10 @@ Route::get('/', function () {
 });
 
 //single booklist
-Route::get('/booklists/{id}', function($id) {
-    return view('booklist', [
-        'booklist' => Booklist::find($id)
-    ]); 
+Route::get('/booklists/{booklist}', function(Booklist $booklist) {
+        return view('booklist', [
+            'booklist' => $booklist
+        ]); 
 });
 
 
