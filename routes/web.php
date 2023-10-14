@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BooklistController;
 use App\Models\Author;
 use Illuminate\Http\Request;
 use App\Models\Booklist;
@@ -16,19 +17,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('booklists', [
-        'heading' => 'Latest Booklists',
-        'booklists' => BookList::all(),
-    ]);
-});
+Route::get('/', [BooklistController::class, 'index']);
 
 //single booklist
-Route::get('/booklists/{booklist}', function(Booklist $booklist) {
-        return view('booklist', [
-            'booklist' => $booklist
-        ]); 
-});
+Route::get('/booklists/{booklist}', [BooklistController::class, 'show']);
+
+
+//Common REsource Routes:
+//index - Show all booklists
+//show - show single booklist
+//create - show forn to create new booklist
+//store - store new booklist
+//edit - show form to edit booklist
+//update - update booklist
+//destroy - delete booklist
 
 
 // Route::get('/test', function () {
