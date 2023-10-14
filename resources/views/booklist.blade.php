@@ -7,18 +7,18 @@
     <i class="fa-solid fa-arrow-left"></i>Back
 </a>
 <div class="mx-4">
-<div class="bg-gray-50 border border-gray-200 p-10 rounded">
-    <div class="flex flex-col items-center justify-center text-center">
-        <h3 class="text-2xl mb-2">{{$booklist->name ?? ""}}</h3>
-        <div class="flex">
-            <img class=""   src="{{asset('images/full-logo.png')}}" alt="">
+    <x-card class="p-100">
+        <div class="flex flex-col items-center justify-center text-center">
+            <h3 class="text-2xl mb-2">{{$booklist->name ?? ""}}</h3>
+            <div class="flex">
+                <img class=""   src="{{asset('images/full-logo.png')}}" alt="">
+            </div>
         </div>
-    </div>
-    {{-- <ul>
-        <li>{{$booklist->author ?? ""}}</li>
-        <li>{{$booklist->title ?? ""}}</li>
-    </div> --}}
-</div>
+        {{-- <ul>
+            <li>{{$booklist->author ?? ""}}</li>
+            <li>{{$booklist->title ?? ""}}</li>
+        </div> --}}
+    </x-card>
 </div>
 
 @endsection

@@ -1,5 +1,5 @@
 @props(['booklist'])
-<div class="bg-gray-50 border border-gray-400 rounded p-6">
+<x-card>
     <div class="flex">
         <div>
             <h3 class="text-2xl">
@@ -8,4 +8,4 @@
             <div class="text-xl  mb-4">{{$booklist->description}}</div>
         </div>
     </div>
-</div>
+</x-card>
