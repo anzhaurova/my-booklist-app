@@ -18,7 +18,6 @@ class BookFactory extends Factory
     public function definition(): array
     {
         return [
-            // 'author_id' => AuthorFactory::factory(),
             'name' => $this->faker->sentence(),
             'author_id' => $this->faker->randomDigit(),
         ];

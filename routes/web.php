@@ -31,9 +31,3 @@ Route::get('/booklists/{booklist}', [BooklistController::class, 'show']);
 //edit - show form to edit booklist
 //update - update booklist
 //destroy - delete booklist
-
-
-// Route::get('/test', function () {
-//     $author = Author::find(5);
-//     dd($author->books);
-// });
