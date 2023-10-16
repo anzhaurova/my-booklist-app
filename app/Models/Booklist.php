@@ -17,4 +17,12 @@ class Booklist extends Model
     {
         return $this->belongsToMany(Book::class, 'booklist_book', 'booklist_id', 'book_id');
     }
+
+    public function scopeFilter($query, array $filters)
+    {
+        if($filters['search']?? false) {
+            $query->where('name', 'like', '%' . request('search') . '%')
+            ->orWhere('description', 'like', '%' . request('search') . '%');
+        }
+    }
 }

@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 
 class BooklistController extends Controller
 {
-    public function index() {
+    public function index(Request $request) {
         return view('booklists.index', [
             'heading' => 'Latest Booklists',
-            'booklists' => BookList::all(),
+            'booklists' => BookList::latest()->filter(request(['search']))->get(),
         ]);
     }
 
