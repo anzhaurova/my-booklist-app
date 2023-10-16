@@ -7,17 +7,15 @@ use Illuminate\Http\Request;
 
 class BooklistController extends Controller
 {
-    //Show all booklists
     public function index() {
-        return view('booklists', [
+        return view('booklists.index', [
             'heading' => 'Latest Booklists',
             'booklists' => BookList::all(),
         ]);
     }
 
-    //Show single booklist
     public function show(Booklist $booklist) {
-        return view('booklist', [
+        return view('booklist.show', [
             'booklist' => $booklist
         ]); 
     }
