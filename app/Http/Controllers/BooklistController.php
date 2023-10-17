@@ -15,8 +15,12 @@ class BooklistController extends Controller
     }
 
     public function show(Booklist $booklist) {
-        return view('booklist.show', [
+        return view('booklists.show', [
             'booklist' => $booklist
         ]); 
+    }
+
+    public function create() {
+        return view('booklists.create');
     }
 }
