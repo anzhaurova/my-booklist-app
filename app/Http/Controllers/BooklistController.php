@@ -23,4 +23,12 @@ class BooklistController extends Controller
     public function create() {
         return view('booklists.create');
     }
+
+    public function store(Request $request) {
+        $formFields = $request->validate([
+            'title' => 'required',
+        ]);
+        // dd($request->all()); //вывод того что отправляем на сервер 
+        return redirect('/');
+    }
 }

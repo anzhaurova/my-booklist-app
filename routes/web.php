@@ -19,14 +19,19 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [BooklistController::class, 'index']);
 
-
+ 
 
 //Show create form
 Route::get('/booklist/create', [BooklistController::class, 'create']);
 
+//store booklist data
+Route::post('/booklists', [BooklistController::class, 'store']);
+ 
+
+
+
 //single booklist
 Route::get('/booklists/{booklist}', [BooklistController::class, 'show']);
-
 
 //Common REsource Routes:
 //index - Show all booklists
